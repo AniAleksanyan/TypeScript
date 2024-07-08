@@ -17,10 +17,14 @@ function App() {
       elm.id != id ? elm : {...elm, completed: !elm.completed}
     ))
   }
+  
+  const addList = (data: IToDo[]) => {
+    setToDos(data);
+  };
 
   return (
     <>
-      <ToDoContext.Provider value={{items: toDos, update}}>
+      <ToDoContext.Provider value={{items: toDos, update, addList}}>
         <ToDoList />
       </ToDoContext.Provider>
     </>

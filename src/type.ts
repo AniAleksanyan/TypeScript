@@ -6,4 +6,5 @@ export interface IToDo{
 export interface IContext{
     items: IToDo[]
     update: (x:number) => void
+    addList: (data: IToDo[]) => void
 }
